@@ -1,0 +1,10 @@
+List<Decimal> list1 = new List<Decimal>();
+list1.add(15.22);
+list1.add(8.12);
+list1.add(28.34);
+list1.add(68.11);
+list1.add(44.44);
+system.debug('the sum of the list is '+DecimalList.sum(list1));
+system.debug('The average of the list is '+DecimalList.Average(list1));
+system.debug('The highest number of the list '+DecimalList.highest(list1));
+system.debug('the lowest number of the list is '+DecimalList.lowest(list1));

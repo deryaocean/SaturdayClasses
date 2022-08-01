@@ -1,0 +1,27 @@
+select Accountid, Name, LastName, email from Contact
+
+Select id, name, phone from Account where phone!=null order by name 
+
+Select name, accountid from contact where accountId !=null
+
+select  count() from opportunity
+
+
+//Medium soql
+//. Fetch all the opportunities which have stage as Closed Won and Amount more than or equal to
+//5000.
+select Name, ID,stageName, amount from opportunity where stageName = 'Closed Won' and amount >= 35000
+
+//2. Fetch all the contacts and their related Account Name, order them by the contact’s last name in
+//descending order.
+
+select name, Account.Name, lastName from contact order by lastName DESC
+//3. Fetch all the Accounts along with their related Opportunities with StageName other than Closed
+//Lost.
+
+select Name, Id, (select StageName from Opportunities where StageName != 'Closed Lost') from Account
+//4. Find the Top 10 opportunities based on Amount value.
+select name,id , amount from opportunity limit 10
+//5. Find lower 20 opportunities based on Amount value which are not set to Closed Won and not to
+//Closed Lost stage.
+select name,id, amount, stageName from opportunity where stageName!='closed Won' and stageName !='closed Lost 

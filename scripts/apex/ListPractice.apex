@@ -1,0 +1,10 @@
+ListPractice lp = new ListPractice();
+string lpMessage = lp.addPlanet(null, 3, 1);
+system.debug(lpMessage);
+string lpMessage2 = lp.addPlanet('Earth', 3, 1) ;
+system.debug(lpMessage2);
+string lpMessage3 = lp.addPlanet('Mars', 2, 0);
+system.debug(lpMessage3);
+ListPractice lp1 = new ListPractice();
+string lp1Message1 = lp1.addPlanet('Demo', 12, 0);
+system.debug(ListPractice.planetsList);
